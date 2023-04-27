@@ -2,7 +2,6 @@ import requests
 import pandas as pd
 
 
-
 def get_restaurants(api_key):
     # Define search parameters for Munich
     munich_params = {
@@ -44,3 +43,4 @@ def get_restaurants(api_key):
         else:
             print("Error: API request failed.")
     return restaurants
+
