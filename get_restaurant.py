@@ -1,8 +1,11 @@
 import requests
 import pandas as pd
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
 def get_restaurants(api_key):
     # Define search parameters for Munich
     munich_params = {
@@ -39,8 +42,16 @@ def get_restaurants(api_key):
                 name = restaurant["name"]
                 address = restaurant["vicinity"]
                 rating = restaurant.get("rating", "-")
+<<<<<<< HEAD
                 restaurants = pd.concat([restaurants, pd.DataFrame({"place_id": place_id, "name": name, "address": address, "rating": rating}, index=[0])],ignore_index=True)
 
         else:
             print("Error: API request failed.")
     return restaurants
+=======
+                restaurants = restaurants.append({"place_id": place_id, "name": name, "address": address, "rating": rating}, ignore_index=True)
+        else:
+            print("Error: API request failed.")
+    return restaurants
+
+>>>>>>> origin/main
